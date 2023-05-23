@@ -12,7 +12,6 @@ import java.util.concurrent.TimeUnit;
 public class Hooks {
     @Before //JAVA
     public void setUp(){
-        System.out.println("\tThis is coming from Before method");
         Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Driver.get().manage().window().maximize();
     }
