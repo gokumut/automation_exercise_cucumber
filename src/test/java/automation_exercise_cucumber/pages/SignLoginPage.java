@@ -1,6 +1,6 @@
 package automation_exercise_cucumber.pages;
 
-import com.automationexercise.utilities.ConfigurationReader;
+import automation_exercise_cucumber.utilities.ConfigurationReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -42,9 +42,9 @@ public class SignLoginPage extends BasePage{
         signUpBtn.click();
     }
 
-    public void logIn() {
-        loginEmailBtn.sendKeys(ConfigurationReader.get("email"));
-       loginPasswordBtn.sendKeys(ConfigurationReader.get("password"));
-       submitBtn.click();
+    public void logIn(String useremail, String password) {
+        loginEmailBtn.sendKeys(useremail);
+        loginPasswordBtn.sendKeys(password);
+        submitBtn.click();
     }
 }

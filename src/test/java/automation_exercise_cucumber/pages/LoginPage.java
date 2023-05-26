@@ -1,9 +1,10 @@
 package automation_exercise_cucumber.pages;
 
-import com.automationexercise.utilities.ConfigurationReader;
+import automation_exercise_cucumber.utilities.ConfigurationReader;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
+
 
 public class LoginPage extends BasePage{
     @FindBy(xpath = "//*[.='marquis']/..")
@@ -15,8 +16,8 @@ public class LoginPage extends BasePage{
     @FindBy(xpath = "//a[@href='/logout']")
     public WebElement logoutBtn;
 
-    public void verifyLogin(){
-        Assert.assertTrue(welcomeText.getText().contains(ConfigurationReader.get("username")));
+    public void verifyLogin(String username){
+        Assert.assertTrue(welcomeText.getText().contains(username));
     }
     public void deleteAccount(){
         deleteBtn.click();

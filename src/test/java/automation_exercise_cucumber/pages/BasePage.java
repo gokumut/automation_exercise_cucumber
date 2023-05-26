@@ -1,6 +1,6 @@
 package automation_exercise_cucumber.pages;
 
-import com.automationexercise.utilities.Driver;
+import automation_exercise_cucumber.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
