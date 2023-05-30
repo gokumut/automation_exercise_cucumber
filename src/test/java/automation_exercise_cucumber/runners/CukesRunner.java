@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "automation_exercise_cucumber.step_definitions",
         dryRun = false,
-        tags = "@login"
+        tags = "@negativelogin"
 )
 public class CukesRunner {
 }
